@@ -40,7 +40,7 @@ var stringifyJSON = function(obj) {
     if (keys.length) {
       var objectJSON = '';
 
-      for (var n = 0; i < keys.length; n++) {
+      for (var n = 0; n < keys.length; n++) {
         var key = keys[n];
 
         if (!key || obj[key] === undefined || typeof key === 'function' || typeof obj[key] === 'function') {
