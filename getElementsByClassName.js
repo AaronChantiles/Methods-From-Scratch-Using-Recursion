@@ -10,7 +10,7 @@ var getElementsByClassName = function(className) {
   var test = function(node) {
     if (node.classList && node.classList.contains(className)) {
       results.push(node);
-    };
+    }
     
     node.childNodes.forEach(function(child) {
       test(child);
@@ -19,4 +19,4 @@ var getElementsByClassName = function(className) {
 	
   test(document.body);
   return results;
-}
+};
