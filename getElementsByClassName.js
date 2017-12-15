@@ -7,7 +7,7 @@
 var getElementsByClassName = function(className) {
   var results = [];
   
-  function test(node) {
+  var test = function(node) {
     if (node.classList && node.classList.contains(className)) {
       results.push(node);
     };
@@ -16,7 +16,7 @@ var getElementsByClassName = function(className) {
       test(child);
     });
   };
-
+	
   test(document.body);
   return results;
 }
