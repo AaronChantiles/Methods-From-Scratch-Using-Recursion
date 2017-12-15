@@ -6,12 +6,12 @@
 var stringifyJSON = function(obj) {
   //primitive types
   if (typeof obj === 'number' || typeof obj === 'boolean' || obj === null) {
-  	return "" + obj;
+    return "" + obj;
   }
 
   //undefined and functions
   if (obj === undefined || obj.constructor === Function) { 
-  	return; 
+    return; 
   }
 
   //strings
@@ -25,9 +25,9 @@ var stringifyJSON = function(obj) {
       var arrayJSON = [];
 
       for (var i = 0; i < obj.length; i++) {
-        arrayJSON.push(stringifyJSON(obj[i]));
+        arrayJSON.push(stringifyJSON(obj[i]));	      
       }
-
+	    
       return '[' + arrayJSON.join(",") + ']';
     } else {
       return '[]';
